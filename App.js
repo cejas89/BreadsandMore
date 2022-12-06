@@ -10,7 +10,7 @@ export default function App() {
     Tillana: require('./src/fonts/Tillana-SemiBold.ttf'),
   });
   if (!fontsLoaded) return <Text>Probando</Text>;
-
+  
   return (
     <ShopNavigator/>
   );
