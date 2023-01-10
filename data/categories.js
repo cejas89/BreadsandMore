@@ -20,3 +20,4 @@ const CATEGORIES = [
     color: "black",
 }
 ] 
+export default CATEGORIES;

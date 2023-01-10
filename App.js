@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import ShopNavigator from './src/navigation/ShopNavigator';
+import BottomTabNavigator from './src/navigation/BottomTabNavigator';
+import MainNavigator from './src/navigation';
 
 export default function App() {
 
@@ -12,7 +14,8 @@ export default function App() {
   if (!fontsLoaded) return <Text>Probando</Text>;
   
   return (
-    <ShopNavigator/>
+   // <ShopNavigator/>
+    <MainNavigator/>
   );
 }
 
