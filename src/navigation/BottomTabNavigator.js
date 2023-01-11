@@ -9,6 +9,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import CartScreen from '../screens/CartScreen.js';
 import ShopNavigator from './ShopNavigator.js';
 import CartNavigator from './CartNavigator';
+import OrderNavigator from './OrderNavigator.js';
 
 
 const BottomTabs = createBottomTabNavigator();
@@ -51,7 +52,7 @@ export default function BottomTabNavigator() {
 
             <BottomTabs.Screen
                 name="OrdersTab"
-                component={CategoryBreadScreen}
+                component={OrderNavigator}
                 options={{
                     tabBarIcon: ({ focus}) => (
                         <View style={styles.item}>

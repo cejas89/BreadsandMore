@@ -17,7 +17,7 @@ const CATEGORIES = [
 {
     id: "4",
     title: "Otros productos de panaderia" ,
-    color: "black",
+    color: "pink",
 }
 ] 
 export default CATEGORIES;

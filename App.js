@@ -6,6 +6,9 @@ import ShopNavigator from './src/navigation/ShopNavigator';
 import BottomTabNavigator from './src/navigation/BottomTabNavigator';
 import MainNavigator from './src/navigation';
 
+import { Provider } from 'react-redux';
+import store from './src/store';
+
 export default function App() {
 
   const [fontsLoaded] = useFonts({
@@ -14,8 +17,9 @@ export default function App() {
   if (!fontsLoaded) return <Text>Probando</Text>;
   
   return (
-   // <ShopNavigator/>
+    <Provider store={store}>
     <MainNavigator/>
+    </Provider>
   );
 }
 

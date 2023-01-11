@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 6,
     margin: 15,
-    height: 150,
+    height: 100,
+    width: 200,
   },
   container: {
     flex: 1,
@@ -33,11 +34,12 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 3,
     justifyContent: "flex-end",
-    alignItems: "flex-end",
+    alignItems: "center",
     padding: 8,
   },
   title: {
     fontFamily: "Tillana",
+    textAlign: 'center',    
   },
 });
 

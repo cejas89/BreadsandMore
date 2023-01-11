@@ -1,7 +1,9 @@
-import { Button, StyleSheet, Text, View, FlatList } from 'react-native'
+import { FlatList } from 'react-native'
 import React from 'react'
 import GridItem from '../../components/GridItem';
-import CATEGORIES from '../../data/categories';
+//import CATEGORIES from '../../data/categories';
+import { useSelector } from 'react-redux';
+
 
 export default function CategoriesScreen({ navigation }) {
   const categories = CATEGORIES;
@@ -24,18 +26,3 @@ export default function CategoriesScreen({ navigation }) {
       numColums={2} />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "red",
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  title: {
-    fontSize: 15,
-    color: 'white',
-    margin: 10,
-  }
-
-})
