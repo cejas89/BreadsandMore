@@ -1,6 +1,6 @@
 const CATEGORIES = [
 {
-    id: "1",
+    id: 1,
     title: "Harinas Leudantes",
     color: "red",
 }, 

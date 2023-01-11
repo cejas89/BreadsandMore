@@ -6,7 +6,8 @@ import { useSelector } from 'react-redux';
 
 
 export default function CategoriesScreen({ navigation }) {
-  const categories = CATEGORIES;
+  const categories = useSelector((state) => state.categories.categories);
+
 
   const handleSelectedCategory = (item) => {
     navigation.navigate('Bread', {
@@ -26,3 +27,4 @@ export default function CategoriesScreen({ navigation }) {
       numColums={2} />
   );
 }
+
