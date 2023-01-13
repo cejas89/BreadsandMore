@@ -9,7 +9,7 @@ export const BREADS = [
   },
   {
     id: "2",
-    category: "1",
+    category: "2",
     name: "Pan Cibatta Blanco",
     description: "Pan de alta hidratacion, miga alveolada y corteza crujiente",
     weight: "800gr",
@@ -25,7 +25,7 @@ export const BREADS = [
   },
   {
     id: "4",
-    category: "1",
+    category: "2",
     name: "Pan de Molde Integral de Centeno",
     description: "Pidelo entero o tajado, con o sin semillas",
     weight: "900gr",

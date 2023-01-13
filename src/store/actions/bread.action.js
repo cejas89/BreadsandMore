@@ -1,4 +1,4 @@
-export const SELECTED_BREAD = "SELEC_BREAD";
+export const SELECTED_BREAD = "SELECTED_BREAD";
 export const FILTERED_BREAD = "FILTERED_BREAD";
 
 export const selectBread = (id) => ({

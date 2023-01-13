@@ -1,18 +1,22 @@
 import { FlatList } from 'react-native'
 import React from 'react'
 import GridItem from '../../components/GridItem';
-//import CATEGORIES from '../../data/categories';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector, connect } from 'react-redux';
+import { selectedCategory } from '../store/actions/category.action';
+
 
 
 export default function CategoriesScreen({ navigation }) {
+  //const categories = CATEGORIES
   const categories = useSelector((state) => state.categories.categories);
+  const dispatch = useDispatch();
 
 
   const handleSelectedCategory = (item) => {
-    navigation.navigate('Bread', {
-      name: item.title
-    })
+    dispatch(selectedCategory(item.id));
+    navigation.navigate("Bread", {
+      name: item.title,
+    });
   };
 
   const renderGridItem = ({ item }) => (
@@ -28,3 +32,4 @@ export default function CategoriesScreen({ navigation }) {
   );
 }
 
+connect()(CategoriesScreen)

@@ -8,6 +8,7 @@ const initialState = {
 };
 
 const CategoryReducer = (state = initialState, action) => {
+    
     switch (action.type) {
         case SELECTED_CATEGORY:
             const IndexCategory = state.categories.findIndex(

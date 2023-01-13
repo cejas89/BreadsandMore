@@ -1,4 +1,4 @@
-import BREADS from "../../../data/breads";
+import { BREADS } from "../../../data/breads";
 import { SELECTED_BREAD, FILTERED_BREAD } from "../actions/bread.action";
 
 const initialState = {
@@ -8,6 +8,7 @@ const initialState = {
 };
 
 const BreadReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case SELECTED_BREAD:
             return {
@@ -18,8 +19,7 @@ const BreadReducer = (state = initialState, action) => {
             return {
                 ...state,
                 filteredBread: state.breads.filter(
-                    (bread) => bread.category === action.categoryID
-                ),
+                    (bread) => bread.category === action.categoryID),
             };
         default:
             return state;
