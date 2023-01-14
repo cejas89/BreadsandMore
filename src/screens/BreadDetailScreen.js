@@ -1,24 +1,22 @@
 import { Button, StyleSheet, Text, View, FlatList } from "react-native";
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { BREADS } from "../../data/breads";
-//import { addItem } from "../store/actions/cart.action";
+import { useSelector, useDispatch, connect } from "react-redux";
 
-const BreadDetailsScreen = ({ route }) => {
+import { addItem } from "../store/actions/cart.action";
+
+const BreadDetailsScreen = ({ }) => {
   const bread = useSelector((state) => state.breads.selected);
-  //  const bread = route.params.breads;
-  // const bread = BREADS.filter(
-  //   (bread) => bread.id === route.params.productID
-  // );
-
+  const dispatch = useDispatch();
 
   useEffect(() => {
     console.log(bread);
   }, []);
 
-  //const dispatch = useDispatch();
 
-  //const handlerAddItemCart = () => dispatch(addItem(bread));
+  const handlerAddItemCart = () => {
+    console.log("Articulo agregado al carrito")
+    dispatch(addItem(bread));
+  }
 
 
 
@@ -29,14 +27,14 @@ const BreadDetailsScreen = ({ route }) => {
         <Text style={styles.description}>{bread.description}</Text>
         <Text style={styles.price}>{bread.price}</Text>
         <View style={styles.button}>
-          <Button title="Agregar al carrito" />
+          <Button title="Agregar al carrito" onPress={handlerAddItemCart} />
         </View>
       </View>
     </View>
   );
 };
 
-export default BreadDetailsScreen;
+export default connect()(BreadDetailsScreen);
 
 const styles = StyleSheet.create({
   container: {

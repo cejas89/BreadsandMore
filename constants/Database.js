@@ -1,0 +1,1 @@
+export const URL_API = 'https://artistica-trasluz-default-rtdb.firebaseio.com/'
